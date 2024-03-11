@@ -1,0 +1,23 @@
+<!---
+With the DOM (Document Object Model), JavaScript can change all the HTML elements,
+attributes, and CSS styles in the page1.
+JavaScript can also add and remove HTML elements and attributes.
+--->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Manipulation Example</title>
+</head>
+<body>
+    <h1 id="heading">Hello World!</h1>
+    <button id="changeTextButton">No changes</button>
+
+    <script>
+        // Change content by their IDs
+        document.getElementById('heading').innerHTML = "<h2>Bey World!</h2>";
+        document.getElementById('changeTextButton').innerHTML = "Changed";
+    </script>
+</body>
+</html>

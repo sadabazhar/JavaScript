@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adding & Removing element</title>
+</head>
+<body>
+    <div style="font-size: 45px;">
+        <div id="myId1" class="myClass">Hii, I'm div1</div>
+        <div id="myId2" class="myClass">Hii, I'm div2</div>
+        <div id="myId3" class="myClass">Hii, I'm div3</div>
+    </div>
+    <script>
+
+// getElementById(): Selects an element by its ID.
+
+    let element1 = document.getElementById('myId1').innerHTML;
+    console.log(element1);
+
+// getElementsByClassName(): Selects elements by their class name.
+
+    let elements2 = document.getElementsByClassName('myClass')[0].innerHTML;
+    console.log(elements2);
+
+
+// getElementsByTagName(): Selects elements by their tag name.
+
+    let elements3 = document.getElementsByTagName('div')[0].innerHTML;
+    console.log(elements3);
+
+
+// querySelector(): Returns the first element that matches a specified CSS selector.
+
+    let element4 = document.querySelector('.myClass').innerHTML;
+    console.log(element4);
+
+
+// querySelectorAll(): Returns all elements in the document that match a specified CSS selector.
+
+    let elements5 = document.querySelectorAll('.myClass')[0].innerHTML;
+    console.log(elements5);
+
+</script>
+</body>
+</html>

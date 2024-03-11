@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="div1">
+  <p id="p1">I'm paragraph (I want to delete myself).</p>
+  <p id="p2">I'm another paragraph.</p>
+</div>
+
+<script>
+/*Adding an element */
+
+// Create a new paragraph element
+const para = document.createElement("p");
+
+// Create a text node
+const node = document.createTextNode("I'm new paragraph.");
+
+//Set their id
+para.setAttribute("id", "p3");
+
+// Append the text node to the paragraph element
+para.appendChild(node);
+
+// Find an existing element
+const element = document.getElementById("div1");
+
+// Append the new paragraph to the existing element
+setTimeout(function() {
+            alert(`"${para.textContent}" Added`);
+            element.appendChild(para);
+}, 2000);
+
+
+/* Removing an element */
+
+//find an existing element
+const elmnt = document.getElementById("p1");
+
+// Remove the element
+setTimeout(function() {
+            alert(`"${elmnt.textContent}" Deleted`);
+            elmnt.remove();
+}, 1000);
+
+</script>
+
+</body>
+</html>

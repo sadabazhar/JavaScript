@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Events Example</title>
+    <style>
+        #inputField{
+            height: 200px;
+            width: 1000px;
+            margin: 20px 0px 0px 20px;
+            text-align: center;
+            background-color:beige;
+            font-size: 30px;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="inputField" placeholder="Type something...">
+    <p id="output"></p>
+
+    <script>
+        const inputField = document.getElementById('inputField');
+        const output = document.getElementById('output');
+
+        // Keydown event listener
+        inputField.addEventListener('keydown', function(event) {
+            output.textContent = `Keydown: Key pressed: ${event.key}, Key code: ${event.keyCode}`;
+        });
+
+        // Keyup event listener
+        inputField.addEventListener('keyup', function(event) {
+            output.textContent = `Keyup: Key released: ${event.key}, Key code: ${event.keyCode}`;
+        });
+
+        // Keypress event listener
+        inputField.addEventListener('keypress', function(event) {
+            output.textContent = `Keypress: Character typed: ${event.key}, Character code: ${event.charCode}`;
+        });
+    </script>
+</body>
+</html>

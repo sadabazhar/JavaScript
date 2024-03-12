@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events</title>
+    <style>
+        .months{
+            height: 100px;
+            width: 200px;
+            border: solid black;
+            text-align: center;
+            margin: 110px 10px 0px 0px;
+            background-color: chartreuse;
+        }
+        #text{
+            font-size: 70px;
+            color:cadetblue;
+        }
+        #main-div{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-div">
+        <div id="text">Choose Your Birthday Month: </div>
+        <div id="1" class="months">Jan</div>
+        <div id="2" class="months">Feb</div>
+        <div id="3" class="months">Mar</div>
+        <div id="4" class="months">Apr</div>
+        <div id="5" class="months">May</div>
+        <div id="6" class="months">Jun</div>
+        <div id="7" class="months">Jul</div>
+        <div id="8" class="months">Aug</div>
+        <div id="9" class="months">Sep</div>
+        <div id="10" class="months">Oct</div>
+        <div id="11" class="months">Nov</div>
+        <div id="12" class="months">Dec</div>
+    </div>
+
+    <script>
+        //Click event
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        const OnClickEvents = () => {
+            for (let i = 1; i <= 12; i++) {
+                document.getElementById(String(i)).addEventListener('click', function(){
+                    alert(`You choosed ${months[i - 1]}`);
+                }, false);// true -> capturing event & false -> Bubbling event
+            }
+        }
+        OnClickEvents();
+
+        //Mouseover event
+        document.getElementById('text').addEventListener('mouseover', function (){
+            alert("Choose your month, Don't waste your time!")
+        })
+
+        //Mouseout event
+        document.getElementById('text').addEventListener('mouseout', function (){
+            alert("Good, Choose your month!")
+        })
+
+        //Mousemove event
+        document.getElementById('text').addEventListener('mousemove', function (){
+            alert("What are you doing here!")
+        })
+    </script>    
+</body>
+</html>

@@ -83,4 +83,4 @@ class Course extends Teacher {
 const CourseObj = new Course("xyz", "Sadab azhar", " Arshad Jamal");
 
 CourseObj.isAvailable();
-console.log(`Assignment: ${CourseObj.makeAssignment}`); ;
+console.log(`Assignment: ${CourseObj.makeAssignment}`);
